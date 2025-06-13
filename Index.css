@@ -1,0 +1,1237 @@
+.body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  background-image: url('Fondo3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.encabezado h3 {
+  color: #fcfbfb;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  transition: all 0.3s ease-in-out;
+}
+
+h2 {
+  border-bottom: 1px solid #003cff;
+  padding-bottom: 0.5rem;
+  font-size: 45px;
+  text-align: center;
+  color: black;
+}
+
+h1 {
+  color: black; 
+  font-size: 3em;
+  text-align: center; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  letter-spacing: 2px;
+
+  /* Neon Shadow + 3D Base */
+  text-shadow:
+    1px 1px 0px rgba(0, 0, 0, 0.7),
+    2px 2px 0px rgba(255, 255, 255, 0.6),
+    3px 3px 0px rgba(0, 0, 0, 0.5),
+    4px 4px 0px rgba(0, 0, 0, 0.4),
+    5px 5px 0px rgba(0, 0, 0, 0.3),
+    0 0 10px #00FFFF,
+    0 0 20px #00FFFF,
+    0 0 30px #00FFFF,
+    0 0 40px #00FFFF,
+    0 0 50px #00FFFF,
+    0 0 60px #00FFFF;
+
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+/* Animación de pulso neón */
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow:
+      1px 1px 0px rgba(0, 0, 0, 0.7),
+      2px 2px 0px rgba(255, 255, 255, 0.6),
+      3px 3px 0px rgba(0, 0, 0, 0.5),
+      4px 4px 0px rgba(0, 0, 0, 0.4),
+      5px 5px 0px rgba(0, 0, 0, 0.3),
+      0 0 10px #00FFFF,
+      0 0 20px #00FFFF,
+      0 0 30px #00FFFF,
+      0 0 40px #00FFFF,
+      0 0 50px #00FFFF,
+      0 0 60px #00FFFF;
+ }
+
+ 50% {
+    text-shadow:
+      1px 1px 0px rgba(0, 0, 0, 0.7),
+      2px 2px 0px rgba(255, 255, 255, 0.6),
+      3px 3px 0px rgba(0, 0, 0, 0.5),
+      4px 4px 0px rgba(0, 0, 0, 0.4),
+      5px 5px 0px rgba(0, 0, 0, 0.3),
+      0 0 5px #00FFFF,
+      0 0 10px #00FFFF,
+      0 0 15px #00FFFF,
+      0 0 20px #00FFFF,
+      0 0 25px #00FFFF,
+      0 0 30px #00FFFF;
+  }
+}
+
+p {
+  font-size: 20px;
+  text-align: justify;
+}
+
+h3 {
+  display: inline-block; /* Para que se alineen en línea */
+  margin: 0 10px; /* Espacio entre los h3 */
+  text-shadow: hsl(0, 100%, 50%) 2px 2px 4px;
+  color: #fcfbfb;
+  font-size: 25px;
+}
+
+h3:hover{
+  color: black;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7),
+  2px 2px 0px rgba(255, 255, 255, 0.6),
+  3px 3px 0px rgba(0, 0, 0, 0.3),
+  4px 4px 0px rgba(0, 0, 0, 0.2),
+  5px 5px 0px rgba(0, 0, 0, 0.1),
+  /* Layer 2: Neon Blue Glow (adjust color and spread as needed) */
+  0 0 10px #00FFFF,   
+  0 0 20px #00FFFF,  
+  0 0 30px #00FFFF,  
+  0 0 40px #00FFFF,   
+  0 0 50px #00FFFF,   
+  0 0 60px #00FFFF;
+}
+
+.neon-glow {
+  width: 280px;
+  height: 250px;
+  margin-top: 0%;
+  margin-right: 0%;
+  border-radius: 50%;
+  animation: pulseNeon 3s infinite;
+  float: left;
+}
+
+.neon-glow img {
+  display: block;
+  width: 300px; /* ajusta según necesites */
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
+}
+
+@keyframes pulseNeon {
+  0%, 100% {
+    box-shadow: 0 0 5px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+  }
+  50% {
+    box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff, 0 0 80px #00ffff;
+  }
+}
+
+li{
+  font-size: 20px;
+}
+
+.center-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.below {
+  margin-top: 10px;
+}
+
+.touch {
+  height: 25px;
+  width: 25px;
+}
+
+.footer {
+ margin-top: 5%;
+}
+
+header, footer {
+  background-image: url("tech.gif");    
+  padding: 1rem;
+  text-align: center;
+  font-size: large;
+}
+
+.footer p{
+  text-align: center;
+  text-shadow: #000000 2px 2px 4px;
+  color:#fcfbfb;
+}
+
+nav {
+  background-color: #9db4ff;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border-bottom: 3px solid #0084ff; 
+}
+
+nav a {
+  background-color: #6f77c0;
+  padding: 10px 20px;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 0 #4f62a0;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+nav a:active {
+  box-shadow: 0 2px 0 #4f57a0;
+  transform: translateY(2px);
+}
+
+button {
+  color: rgb(255, 255, 255);
+  background-color: #5792ff;
+  margin: 0 10px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover {
+  background: linear-gradient(to top, #ff9e91, #e0e0e0);
+  color: rgb(255, 255, 255); 
+  box-shadow: 0 2px 0 #e0ff55, 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/*division de container*/
+
+.contenedor1 {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  padding: 10px;
+  border-radius: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 1%;
+  max-width: 1000px;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  font-family: 'Times New Roman', Times, serif;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.contenedor1 h2,
+.contenedor1 h3 {
+  color: #222;
+}
+
+.contenedor1 ul {
+  padding-left: 20px;
+}
+
+.contenedor1 li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* ✅ Efecto neón azul al pasar el mouse */
+.contenedor1:hover {
+  box-shadow: 0 0 15px #00f0ff,
+              0 0 30px #00f0ff,
+              0 0 60px #00f0ff;
+  transform: scale(1.02);
+}
+
+/*division de container*/
+
+.contenedor2{
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  font-family: 'Times New Roman', Times, serif;
+  float: left;
+  margin-left: 5%;
+  margin-top: 6%;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.contenedor2 h2,
+.contenedor2 h3 {
+  color: #222;
+}
+
+.contenedor2 ul {
+  padding-left: 20px;
+}
+
+.contenedor2 li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  align-self: left;
+}
+
+.contenedor2:hover {
+  box-shadow: 0 0 15px #00f0ff,
+              0 0 30px #00f0ff,
+              0 0 60px #00f0ff;
+  transform: scale(1.02);
+}
+/*division de container*/
+
+.contenedor3{
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 1020px;
+  margin: 50px auto;
+  margin-left: 5%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  font-family: 'Times New Roman', Times, serif;
+  float: left;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.contenedor3 h2,
+.contenedor3 h3 {
+  color: #222;
+}
+
+.contenedor3 ul {
+  padding-left: 20px;
+}
+
+.contenedor3 li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.contenedor3:hover {
+  box-shadow: 0 0 15px #00f0ff,
+              0 0 30px #00f0ff,
+              0 0 60px #00f0ff;
+  transform: scale(1.02);
+}
+
+/*division de container*/
+
+.contenedor4{
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 50px auto;
+  margin-bottom: 7%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  font-family: 'Times New Roman', Times, serif;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.contenedor4 h2,
+.contenedor4 h3 {
+  color: #222;
+}
+
+.contenedor4 ul {
+  padding-left: 20px;
+}
+
+.contenedor4 li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.contenedor4:hover {
+  box-shadow: 0 0 15px #00f0ff,
+              0 0 30px #00f0ff,
+              0 0 60px #00f0ff;
+  transform: scale(1.02);
+}
+
+/*division de container*/
+
+.contenedor5{
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  padding: 30px;
+  padding-right: 3%;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  font-family: 'Times New Roman', Times, serif;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.contenedor5 h2,
+.contenedor5 h3 {
+  color: #222;
+}
+
+.contenedor5 ul {
+  padding-left: 20px;
+}
+
+.contenedor5 li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.contenedor5:hover {
+  box-shadow: 0 0 15px #00f0ff,
+              0 0 30px #00f0ff,
+              0 0 60px #00f0ff;
+  transform: scale(1.02);
+}
+
+/*division de container*/
+.accordion {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 10px 0;
+  border: none;
+  background: none;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.detalle-toggle:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.proyecto-toggle {
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+.proyecto-toggle:hover {
+  color: green;
+}
+
+.proyecto-panel {
+  display: none;
+  margin-left: 20px;
+}
+
+.proyecto-panel.show {
+  display: block;
+}
+
+.accordion:hover {
+  color: green;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding-left: 20px;
+}
+.panel.show {
+  max-height: 1500px; /* Suficiente para mostrar todo el contenido */
+}
+
+/*division de accordion*/
+
+.accordion1 {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 10px 0;
+  border: none;
+  background: none;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.accordion1:hover {
+  color: green;
+}
+
+.panel1 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding-left: 20px;
+}
+
+.panel1.show {
+  max-height: 2000px; /* Ajusta según contenido */
+}
+
+/*division de accordion*/
+
+.accordion2 {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 10px 0;
+  border: none;
+  background: none;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.accordion2:hover {
+  color: green;
+}
+
+.panel2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding-left: 20px;
+}
+
+.panel2.show {
+  max-height: 1000px; /* Ajusta según contenido */
+}
+
+/*division de accordion y container*/
+
+.contenedor6{
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  padding: 30px;
+  padding-right: 50px;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.contenedor6 h2,
+.contenedor6 h3 {
+  color: #222;
+}
+
+.contenedor6 ul {
+  padding-left: 20px;
+}
+
+.contenedor6 li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.contenedor6:hover {
+  box-shadow: 0 0 15px #00f0ff,
+              0 0 30px #00f0ff,
+              0 0 60px #00f0ff;
+  transform: scale(1.02);
+}
+
+/*division de container*/
+
+.celular {
+  float: right;
+  font-weight: normal;
+}
+
+.referencia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.celular {
+  font-weight: normal;
+}
+/*division de container*/
+
+.contenedor7 {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 50px auto 10px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 15%;
+  float: left;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+  /* ✅ Agregado para evitar "salto" visual en hover */
+  will-change: transform, box-shadow;
+}
+
+.contenedor7:hover {
+  box-shadow: 0 0 15px #00f0ff,
+              0 0 30px #00f0ff,
+              0 0 60px #00f0ff;
+  transform: scale(1.02);
+}
+
+/*division de contenedor*/
+
+.contact-info-text {
+  display: grid;
+  grid-template-columns: 30px auto 1fr;
+  gap: 10px 15px;
+  align-items: center;
+}
+
+.contact-info-text h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.contact-info-text p {
+  margin: 0;
+  display: contents;
+}
+
+.contact-info-text img {
+  grid-column: 1;
+  width: 20px;
+  height: 20px;
+  justify-self: center;
+}
+
+.contact-info-text p + .dato {
+  grid-column: 3;
+  text-align: right;
+  font-weight: normal;
+}
+
+.dato {
+  font-weight: bold;
+  
+  font-size: 20px;
+}
+.dato a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.dato a:hover {
+  text-decoration: underline;
+}
+
+.image-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.Contactogif {
+  max-width: 100%;
+  height: 300px;
+  width: 360px;
+  border-radius: 8%;
+}
+
+.Gmail{
+  width: 20px;
+  height: 20px;
+  margin-top: 0%;
+}
+    
+.Whatsapp{
+  width: 20px;
+  height: 20px;
+  margin-top: 0%;
+}
+.menus {
+  background-color: rgba(5, 14, 65, 0.7);;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 132, 255, 0.3);
+}
+
+.menus a {
+  display: inline-block;
+  margin: 0 30px;
+  padding: 10px 20px;
+  font-family:'ti';
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+  background: linear-gradient(to top, #ffa6a6, #7ae4ff);
+  border: 2px solid #ff6565;
+  border-radius: 8px;
+  box-shadow: 0 4px 0 #000000;
+  transition: all 0.2s ease-in-out;
+  transform: perspective(1px) translateZ(0);
+}
+
+.menus a:hover {
+  background: linear-gradient(to top, #688ff8, #e0e0e0);
+  color: white; 
+  box-shadow: 0 2px 0 #0004ff, 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.menus a:active {
+  box-shadow: 0 1px 0 #0022aa;
+  transform: translateY(2px);
+}
+
+a link{
+  color: rgb(0, 153, 255); 
+  
+}
+
+a link:visited {
+  color: purple; 
+}
+
+a link:hover {
+  color: rgb(255, 0, 0); 
+}
+
+a link:active {
+  color: orange; 
+}
+
+.educaciongif {
+  padding-left: 10%;
+  
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 551px;
+  height: 650px;
+  margin-left: 55%;
+  margin-top: 5.3%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* 🔵 Efecto neón azul al hacer hover */
+.form-container:hover {
+  box-shadow: 0 0 15px #00f0ff,
+              0 0 30px #00f0ff,
+              0 0 60px #00f0ff;
+  transform: scale(1.02);
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  float: center;  
+}
+
+input, textarea {
+  background: black;
+  border: 2px solid #f2b630;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #ccc;
+}
+
+button {
+  background-color: #020202;
+  border: none;
+  margin-left: 30%;
+  padding: 12px;
+  max-width: 200px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #e5a800;
+}
+
+/* Modal base */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenido del modal */
+.modal-content {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Botón cerrar */
+#closeModal {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f2b630;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#closeModal:hover {
+  background-color: #e5a800;
+}
+
+@media screen and (max-width: 1200px) {
+  .form-container {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contenedor2,
+  .contenedor3,
+  .contenedor7 {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .menus a {
+    margin: 5px 5px;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .neon-glow {
+    width: 200px;
+    height: 180px;
+  }
+
+  .slider {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .slides img {
+    width: 100%;
+  }
+
+  .form-container {
+    width: 90%;
+    height: auto;
+  }
+
+  .contact-info-text {
+    grid-template-columns: 20px auto;
+    gap: 10px;
+  }
+
+  .contact-info-text p + .dato {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  .Contactogif {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav a,
+  .menus a {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+  }
+
+  .thumbnail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thumbnail {
+    width: 90%;
+    height: auto;
+  }
+
+  input, textarea {
+    font-size: 16px;
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contenedor1,
+  .contenedor2,
+  .contenedor3,
+  .contenedor4,
+  .contenedor5,
+  .contenedor6,
+  .contenedor7 {
+    padding: 20px;
+    width: 95%;
+    margin: 30px auto;
+  }
+}
+
+/* Make image sections and headers fit smaller screens */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix horizontal scroll issues from fixed widths */
+body {
+  overflow-x: hidden;
+}
+
+/* Avoid overflow on slider */
+header {
+  position: relative;
+  /* Altura más fluida y responsive para el header */
+  min-height: 250px; /* Altura mínima para pantallas pequeñas */
+  height: 300px; /* Altura deseada en pantallas grandes */
+  max-height: 400px; /* Altura máxima para pantallas muy grandes */
+  padding: 50px 20px; /* Suficiente padding para dar altura y espacio al contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden; /* Muy importante para que las imágenes del slider no se desborden */
+}
+
+.slider-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Este overflow controla que solo se vea un slide a la vez */
+  z-index: 1;
+}
+
+#headerSlideContainer {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+  /* Ancho total para que quepan todas las imágenes, 100% por cada slide */
+  width: calc(100% * 3); /* Si tienes 3 slides, es 300%. Si tienes N slides, es N*100% */
+}
+
+#headerSlideContainer img {
+  flex-shrink: 0;
+  /* **CAMBIO CLAVE:** Cada imagen ocupa el 100% de la "ventana" del slider (que es 1/3 del total de #headerSlideContainer) */
+  width: calc(100% / 3); /* Si tienes 3 slides, es 100% / 3. Es el 100% del ancho del viewport */
+  height: 100%;
+  /* **CAMBIO CLAVE:** Usar 'contain' para que la imagen completa se vea */
+  object-fit: contain; /* Asegura que la imagen completa se vea, puede dejar espacios si la relación de aspecto no coincide */
+  /* Si prefieres que siempre cubra el espacio y no te importa un poco de recorte, usa 'cover' */
+  /* object-fit: cover; */
+}
+
+.slider-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#headerSlideContainer {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+#headerSlideContainer img {
+  flex-shrink: 0;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+header h1, header h3 {
+  margin: 10px 0;
+}
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; margin: 0; background: #000000; color: #ffffff; }
+
+.slider {
+  position: relative;
+  max-width: 300px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.nav button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.slider {
+  width: 350px;
+  overflow: hidden;
+  padding-right: 340px;
+  margin-top: 3%;
+  border-radius: 10%;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 1050px; 
+}
+
+.slides img {
+  width: 350px;
+  height: auto;
+}
+
+.nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*IMAGENES DE EDUCACION*/
+
+/* Estilos para el contenedor de miniaturas */
+.thumbnail-container {
+  display: flex; /* Para que las miniaturas se muestren en fila */
+  gap: 10px; /* Espacio entre las miniaturas */
+  justify-content: center; /* Centra las miniaturas horizontalmente */
+  margin-top: 20px;
+  margin-bottom: 5%;
+}
+
+/* Estilos para las miniaturas */
+.thumbnail {
+  width: 200px; /* Ancho de la miniatura */
+  height: 200px; /* Alto de la miniatura */
+  object-fit: cover; /* Recorta la imagen para que se ajuste sin distorsión */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+  border: 2px solid #ddd; /* Borde alrededor de la miniatura */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: transform 0.2s ease-in-out; /* Animación al pasar el mouse */
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05); /* Ligeramente más grande al pasar el mouse */
+}
+
+/* Estilos para el Modal (fondo y contenido) */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Permanece en la misma posición incluso al hacer scroll */
+  z-index: 1; /* Se superpone a otros elementos */
+  padding-top: 100px; /* Posición desde la parte superior */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  overflow: auto; /* Permite scroll si la imagen es muy grande */
+  background-color: rgba(0,0,0,0.9); /* Fondo semitransparente oscuro */
+}
+
+/* Contenido del modal (imagen ampliada) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  border: 5px; /* ✅ Quita bordes */
+  padding: 5px; /* ✅ Evita espacios extra */
+  box-shadow: none;       
+}
+
+/* El botón de cerrar */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos para la descripción de la imagen (caption) */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px; /* Opcional: ajustar altura */
+}
+
+/* Animación para el modal */
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 960px; /* Limit width on large screens */
+  margin: 0 auto; /* Center content */
+}
+
+header h1, header h3 {
+  margin: 10px 0;
+}
+
+.profile-img {
+  /* No es necesario cambiar la posición aquí, ya lo hace el header-content */
+  max-width: 300px; /* Tamaño máximo para escritorio */
+  height: auto;
+  border-radius: 50%;
+
+}
+
+/* ... (El resto de tu CSS anterior para otras secciones) ... */
+
+/* Media Queries for Responsiveness */
+
+/* Móviles pequeños (max-width: 768px) */
+@media (max-width: 768px) {
+  header {
+    min-height: 150px; /* Altura mínima más pequeña */
+    padding: 30px 10px; /* Menos padding */
+  }
+
+  /* **CAMBIO CLAVE:** Ajustar el ancho de las imágenes del slider en móviles */
+  #headerSlideContainer img {
+    width: calc(100vw / 3); /* Cada imagen sigue ocupando 100% de la ventana móvil, pero en relación al total de slides */
+    /* width: 100vw; // Si quieres que cada slide ocupe toda la pantalla y el transform se ajuste a eso */
+  }
+  /* Si el #headerSlideContainer img se ajusta a 100% del ancho del VIEWPORT (100vw), entonces el JS
+     debe seguir con `translateX(-${headerCurrentSlide * 100}vw)`.
+     Si quieres que se ajuste al 100% del *contenedor padre* (`.slider-background`),
+     entonces `width: 100%;` y el JS sería `translateX(-${headerCurrentSlide * 100}%)`.
+
+     Dado que tu JS usa `vw`, mantendremos `100vw` para la imagen, pero el `width` de `#headerSlideContainer`
+     debe ser `totalSlides * 100vw`.
+  */
+  #headerSlideContainer {
+    width: calc(100vw * 3); /* Asegura que el contenedor de slides tenga el ancho total */
+  }
+
+  .profile-img {
+    max-width: 100px; /* Imagen de perfil más pequeña */
+  }
+}
+
+/* Smallest mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .profile-img {
+    max-width: 80px; /* Todavía más pequeña */
+  }
+}
