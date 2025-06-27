@@ -23,6 +23,8 @@ h2 {
   color: black;
 }
 
+
+
 h1 {
   color: black; 
   font-size: 3em;
@@ -197,28 +199,12 @@ nav a:active {
   transform: translateY(2px);
 }
 
-button {
-  color: rgb(255, 255, 255);
-  background-color: #5792ff;
-  margin: 0 10px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: large;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-button:hover {
-  background: linear-gradient(to top, #ff9e91, #e0e0e0);
-  color: rgb(255, 255, 255); 
-  box-shadow: 0 2px 0 #e0ff55, 0 6px 10px rgba(0, 0, 0, 0.3);
-  transform: translateY(-2px);
-}
-
 /*division de container*/
 
 .contenedor1 {
-  background-color: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
+  text-shadow: white 1px 1px 2px;
   padding: 10px;
   border-radius: 10px;
   padding-left: 50px;
@@ -226,7 +212,7 @@ button:hover {
   padding-bottom: 1%;
   max-width: 1000px;
   margin: 50px auto;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   font-family: 'Times New Roman', Times, serif;
   transition: box-shadow 0.4s ease, transform 0.3s ease;
 }
@@ -256,8 +242,9 @@ button:hover {
 /*division de container*/
 
 .contenedor2{
-  background-color: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
+  text-shadow: white 1px 1px 2px;
   padding: 30px;
   border-radius: 10px;
   max-width: 1000px;
@@ -294,8 +281,9 @@ button:hover {
 /*division de container*/
 
 .contenedor3{
-  background-color: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
+  text-shadow: white 1px 1px 2px;
   padding: 30px;
   border-radius: 10px;
   max-width: 1020px;
@@ -331,8 +319,9 @@ button:hover {
 /*division de container*/
 
 .contenedor4{
-  background-color: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
+  text-shadow: white 1px 1px 2px;
   padding: 30px;
   border-radius: 10px;
   max-width: 1000px;
@@ -367,8 +356,9 @@ button:hover {
 /*division de container*/
 
 .contenedor5{
-  background-color: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
+  text-shadow: white 1px 1px 2px;
   padding: 30px;
   padding-right: 3%;
   border-radius: 10px;
@@ -509,8 +499,9 @@ button:hover {
 /*division de accordion y container*/
 
 .contenedor6{
-  background-color: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
+  text-shadow: white 1px 1px 2px;
   padding: 30px;
   padding-right: 50px;
   border-radius: 10px;
@@ -562,8 +553,9 @@ button:hover {
 /*division de container*/
 
 .contenedor7 {
-  background-color: rgba(255, 255, 255, 0.85);
+  background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
+  text-shadow: white 1px 1px 2px;
   padding: 40px;
   border-radius: 10px;
   max-width: 1000px;
@@ -618,13 +610,14 @@ button:hover {
 }
 
 .dato {
-  font-weight: bold;
-  
   font-size: 20px;
+  color: #06ffff;
+  text-shadow: #000000 2px 2px 4px;
 }
+
 .dato a {
-  color: #007bff;
-  text-decoration: none;
+  color: #06ffff;
+  text-shadow: #000000 2px 2px 4px;
 }
 
 .dato a:hover {
@@ -682,7 +675,7 @@ button:hover {
 .menus a:hover {
   background: linear-gradient(to top, #688ff8, #e0e0e0);
   color: white; 
-  box-shadow: 0 2px 0 #0004ff, 0 6px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 0 #0004ffa1, 0 6px 10px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
 
@@ -714,7 +707,8 @@ a link:active {
 }
 
 .form-container {
-  background-color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff); /* degradado azul a blanco */
+  text-shadow: white 1px 1px 2px;
   padding: 40px;
   border-radius: 15px;
   max-width: 551px;
@@ -722,10 +716,10 @@ a link:active {
   margin-left: 55%;
   margin-top: 5.3%;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  font-family: Arial, sans-serif;
-  transition: box-shadow 0.4s ease, transform 0.3s ease;
   font-family: 'Times New Roman', Times, serif;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
 }
+
 
 /* 🔵 Efecto neón azul al hacer hover */
 .form-container:hover {
@@ -744,7 +738,7 @@ form {
 
 input, textarea {
   background: black;
-  border: 2px solid #f2b630;
+  border: 2px solid #00ffff;
   border-radius: 8px;
   padding: 12px;
   margin-bottom: 15px;
@@ -758,20 +752,40 @@ input::placeholder, textarea::placeholder {
 }
 
 button {
-  background-color: #020202;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to bottom, #ffffff, #00eeffbb, #00000071);
+  text-decoration: none;
+  text-shadow: #000;
   border: none;
-  margin-left: 30%;
+  margin: 0 150px;
   padding: 12px;
-  max-width: 200px;
-  border-radius: 20px;
+  max-width: 250px;
+  border-radius: 8px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: large;
   cursor: pointer;
   transition: background 0.3s;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 button:hover {
-  background-color: #e5a800;
+  background: linear-gradient(to top, #ff9e91, #e0e0e0);
+  color: rgb(255, 255, 255); 
+  box-shadow: 0 2px 0 #e0ff55, 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+
+}
+
+.buttoncv {
+  background-color: #ffffffd2;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 /* Modal base */
