@@ -204,7 +204,7 @@ nav a:active {
 .contenedor1 {
   background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
-  text-shadow: white 1px 1px 2px;
+  text-shadow: white 2px 2px 3px;
   padding: 10px;
   border-radius: 10px;
   padding-left: 50px;
@@ -244,7 +244,7 @@ nav a:active {
 .contenedor2{
   background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
-  text-shadow: white 1px 1px 2px;
+  text-shadow: white 2px 2px 3px;
   padding: 30px;
   border-radius: 10px;
   max-width: 1000px;
@@ -283,7 +283,7 @@ nav a:active {
 .contenedor3{
   background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
-  text-shadow: white 1px 1px 2px;
+  text-shadow: white 2px 2px 3px;
   padding: 30px;
   border-radius: 10px;
   max-width: 1020px;
@@ -321,7 +321,7 @@ nav a:active {
 .contenedor4{
   background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
-  text-shadow: white 1px 1px 2px;
+  text-shadow: white 2px 2px 3px;
   padding: 30px;
   border-radius: 10px;
   max-width: 1000px;
@@ -358,7 +358,7 @@ nav a:active {
 .contenedor5{
   background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
-  text-shadow: white 1px 1px 2px;
+  text-shadow: white 2px 2px 3px;
   padding: 30px;
   padding-right: 3%;
   border-radius: 10px;
@@ -501,7 +501,7 @@ nav a:active {
 .contenedor6{
   background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
-  text-shadow: white 1px 1px 2px;
+  text-shadow: white 2px 2px 3px;
   padding: 30px;
   padding-right: 50px;
   border-radius: 10px;
@@ -555,7 +555,7 @@ nav a:active {
 .contenedor7 {
   background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
-  text-shadow: white 1px 1px 2px;
+  text-shadow: white 2px 2px 3px;
   padding: 40px;
   border-radius: 10px;
   max-width: 1000px;
@@ -713,7 +713,7 @@ a link:active {
 
 .form-container {
   background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff); /* degradado azul a blanco */
-  text-shadow: white 1px 1px 2px;
+  text-shadow: white 2px 2px 3px;
   padding: 40px;
   border-radius: 15px;
   max-width: 551px;
@@ -874,7 +874,11 @@ button:hover {
   h3 {
     font-size: 20px;
   }
-
+  
+  p {
+    font-size: 18px;
+  }
+  
   .neon-glow {
     width: 200px;
     height: 180px;
