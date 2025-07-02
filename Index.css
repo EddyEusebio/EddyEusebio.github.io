@@ -680,7 +680,7 @@ nav a:active {
 .menus a:hover {
   background: linear-gradient(to top, #688ff8, #e0e0e0);
   color: white; 
-  box-shadow: 0 2px 0 #0004ffa1, 0 6px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 0 #ffffff, 0 6px 10px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
 
