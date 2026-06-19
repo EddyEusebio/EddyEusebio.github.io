@@ -10,9 +10,9 @@
   <meta property="og:url" content="https://eddyeusebio.github.io/Index.html" />
   <meta property="og:type" content="website" />
     
-    
+     
     <link rel="stylesheet" href="Index.css">
-    <title>Mi Portafolio</title>
+    <title>Mi Portafolio</title> 
     <link rel="icon" href="ventana2.png" type="image/png">
   </head>
   <body class="body">
@@ -26,6 +26,8 @@
           </div>
         </div>
 
+<section id="DESARROLLADOR"></section>
+
     <div class="header-content" style="position: relative; z-index: 2; color: white; padding: 20px;">
           <img src="PROFILE.png" alt="PROFILE" class="neon-glow profile-img">
           <br><br>
@@ -33,20 +35,31 @@
           <br>
           <h3>DESARROLLADOR</h3> | <h3>DISEÑADOR</h3> | <h3>PROFESIONAL</h3>
         </div>
-    </header>
+    </header> 
 
     <!-- ✅ Este es el lugar correcto para cargar tu JS -->
 
-    <nav class="menus">
-      <a href="#sobre-mi" onclick="playSound()">Sobre mí</a>
-      <a href="#educacion" onclick="playSound()">Educación</a>
-      <a href="#cursos-y-mas" onclick="playSound()">Cursos y más</a>
-      <a href="#experiencia" onclick="playSound()">Experiencia</a>
-      <a href="#proyectos" onclick="playSound()">Proyectos</a>
-      <a href="#referencias" onclick="playSound()">Referencias</a>
-      <a href="#contacto" onclick="playSound()">Contacto</a>
-    </nav>
+  <nav class="menus closed">
+  <button class="menu-toggle" aria-label="Toggle Menu">
+  <div class="list-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <span class="menu-tooltip">Abrir</span>
+</button>
 
+  <div class="menu-links">
+    <a href="#DESARROLLADOR" onclick="playSound()">Inicio</a>
+    <a href="#sobre-mi" onclick="playSound()">Sobre mí</a>
+    <a href="#educacion" onclick="playSound()">Educación</a>
+    <a href="#cursos-y-mas" onclick="playSound()">Cursos y más</a>
+    <a href="#experiencia" onclick="playSound()">Experiencia</a>
+    <a href="#proyectos" onclick="playSound()">Proyectos</a>
+    <a href="#referencias" onclick="playSound()">Referencias</a>
+    <a href="#contacto" onclick="playSound()">Contacto</a>
+  </div>
+</nav>
     <!-- Solo necesitas un audio si todos comparten el mismo sonido -->
     <audio id="Tecla" src="Tecla.mp3"></audio>
 
