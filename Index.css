@@ -2,14 +2,14 @@
   margin: 0;
   font-family: 'Times New Roman', Times, serif;
   color: white;
-  background-image: url('Fondo3.jpg');
+  background-image: url('Fondo33.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
 
-.encabezado h3 {
+.encabezado h3 { 
   color: #fcfbfb;
   text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
   transition: all 0.3s ease-in-out;
@@ -21,10 +21,10 @@ h2 {
   font-size: 45px;
   text-align: center;
   color: black;
-}
+} 
 
 
-
+ 
 h1 {
   color: black; 
   font-size: 3em;
@@ -140,6 +140,8 @@ h3:hover{
 
 li{
   font-size: 20px;
+  color: white;
+  text-shadow: black;
 }
 
 .center-group {
@@ -203,8 +205,7 @@ nav a:active {
 
 .contenedor1 {
   background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
-  color: #000;
-  text-shadow: white 2px 2px 3px;
+  text-shadow: rgb(255, 255, 255) 2px 2px 3px;
   padding: 10px;
   border-radius: 10px;
   padding-left: 50px;
@@ -215,6 +216,10 @@ nav a:active {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   font-family: 'Times New Roman', Times, serif;
   transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.contenedor1 p{
+  text-shadow: rgb(0, 0, 0) 2px 2px 3px;
 }
 
 .contenedor1 h2,
@@ -244,7 +249,7 @@ nav a:active {
 .contenedor2{
   background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
   color: #000;
-  text-shadow: white 2px 2px 3px;
+  text-shadow: rgb(255, 255, 255) 2px 2px 3px;
   padding: 30px;
   border-radius: 10px;
   max-width: 1000px;
@@ -253,8 +258,12 @@ nav a:active {
   font-family: 'Times New Roman', Times, serif;
   float: left;
   margin-left: 5%;
-  margin-top: 6%;
+  margin-top: 6%; 
   transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.contenedor2 p, li{
+  text-shadow: rgb(0, 0, 0) 2px 2px 3px;
 }
 
 .contenedor2 h2,
@@ -320,7 +329,7 @@ nav a:active {
 
 .contenedor4{
   background: linear-gradient(to bottom, #ffffff, #007bff91, #73d3ff);
-  color: #000;
+  color: #000000;
   text-shadow: white 2px 2px 3px;
   padding: 30px;
   border-radius: 10px;
@@ -368,6 +377,18 @@ nav a:active {
   font-family: 'Times New Roman', Times, serif;
   transition: box-shadow 0.4s ease, transform 0.3s ease;
 }
+
+.panel1 p{
+  color: white;
+  text-shadow: rgb(0, 0, 0) 2px 2px 3px;
+}
+
+.panel1 {
+  color: white;
+  text-shadow: rgb(0, 0, 0) 2px 2px 3px;
+}
+
+
 
 .contenedor5 h2,
 .contenedor5 h3 {
@@ -653,40 +674,209 @@ nav a:active {
   height: 20px;
   margin-top: 0%;
 }
+
+/* Contenedor principal del menú lateral */
+/* ==========================================================================
+   BOTÓN SEMICIRCULAR CORREGIDO (Pegado dinámicamente)
+   ========================================================================== */
+
 .menus {
-  background-color: rgba(5, 14, 65, 0.7);;
-  text-align: center;
-  padding: 20px 0;
-  box-shadow: 0 4px 10px rgba(0, 132, 255, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px; /* Ancho del menú desplegado */
+  height: 100vh;
+  background-color: rgba(5, 14, 65, 0.95);
+  box-shadow: 4px 0 10px rgba(0, 132, 255, 0.3);
+  z-index: 9999;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .menus a {
-  display: inline-block;
-  margin: 0 30px;
-  padding: 10px 20px;
-  font-family:'ti';
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio por si en el futuro agregas iconos a la izquierda como en tu imagen */
+  width: 100%; /* Ocupa todo el ancho del menú para crear filas perfectas */
+  box-sizing: border-box;
+  margin: 0; 
+  padding: 16px 25px; /* Padding cómodo para simular las celdas de la imagen */
+  font-family: 'ti', sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 19px;
   text-decoration: none;
-  color: #000;
-  background: linear-gradient(to top, #ffa6a6, #7ae4ff);
-  border: 2px solid #ff6565;
-  border-radius: 8px;
-  box-shadow: 0 4px 0 #000000;
-  transition: all 0.2s ease-in-out;
-  transform: perspective(1px) translateZ(0);
+  color: #ffffff; /* Texto blanco limpio */
+  background: transparent; /* Fondo transparente para que use el color oscuro del menú */
+  
+  /* Quitamos el estilo 3D y añadimos la línea divisoria inferior de la imagen */
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+  
+  transition: background-color 0.2s ease-in-out;
+  transform: none;
 }
 
+/* Efecto Hover (Sutil cambio de fondo plano al pasar el cursor) */
 .menus a:hover {
-  background: linear-gradient(to top, #688ff8, #e0e0e0);
-  color: white; 
-  box-shadow: 0 2px 0 #ffffff, 0 6px 10px rgba(0, 0, 0, 0.3);
-  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.08); /* Resalte sutil */
+  color: #ffffff; 
+  box-shadow: none;
+  transform: none; /* Eliminamos el movimiento hacia arriba */
 }
 
+/* Efecto Active (Al hacer clic) */
 .menus a:active {
-  box-shadow: 0 1px 0 #0022aa;
-  transform: translateY(2px);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: none;
+  transform: none;
+}
+/* Estado oculto/colapsado (Mueve todo el bloque a la izquierda fuera de la pantalla) */
+.menus.closed {
+  transform: translateX(-100%);
+}
+
+/* ==========================================================================
+   BOTÓN SEMICIRCULAR CORREGIDO (Pegado perfecto)
+   ========================================================================== */
+/* ==========================================================================
+   BOTÓN SEMICIRCULAR CORREGIDO
+   ========================================================================== */
+.menu-toggle {
+  position: absolute;
+  top: 40px; 
+  left: 100%; 
+  width: 55px;
+  height: 70px;
+  
+  /* Color azul plano institucional */
+  background-color: #2252b7; 
+  
+  border: none;
+  border-right: 2px solid rgba(255, 255, 255, 0.2); 
+  border-radius: 0 50px 50px 0; 
+  
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
+  outline: none;
+  margin: 0; 
+  padding-right: 6px; /* Ajuste sutil para centrar el icono en la curva */
+}
+
+/* ==========================================================================
+   INTERRUPTOR INTERNO (Las 3 rayas que se convierten en X)
+   ========================================================================== */
+.list-icon {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Suaviza la rotación general de todo el contenedor hacia la derecha */
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Propiedades comunes para las tres líneas */
+.list-icon span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transform-origin: center; /* Centra el eje de rotación de cada línea */
+}
+
+/* ==========================================================================
+   ANIMACIÓN DE ESTADOS (Basado en la clase .closed de .menus)
+   ========================================================================== */
+
+/* CUANDO EL MENÚ ESTÁ ABIERTO: El contenedor completo rota 180° a la derecha */
+.menus:not(.closed) .list-icon {
+  transform: rotate(180deg);
+}
+
+/* Línea superior: Baja al centro y rota 45 grados */
+.menus:not(.closed) .list-icon span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+/* Línea del medio: Se desvanece por completo */
+.menus:not(.closed) .list-icon span:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Línea inferior: Sube al centro y rota -45 grados */
+.menus:not(.closed) .list-icon span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+/* Icono de lista dentro del semicírculo */
+.menu-icon {
+  color: white;
+  font-size: 24px;
+  margin-left: -4px; 
+}
+
+/* ==========================================================================
+   ETIQUETA FLOTANTE (ABRIR / CERRAR)
+   ========================================================================== */
+.menu-tooltip {
+  position: absolute;
+  left: 65px;
+  background-color: white;
+  color: #333;
+  padding: 6px 14px;
+  
+  border: 1px solid #4a4a4a;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* Indicador triangular de la etiqueta */
+.menu-tooltip::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent #4a4a4a transparent transparent;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* MODIFICADO: Aumentado de 15px a 25px para dar más espacio entre botones */
+  width: 100%;
+  align-items: center;
+}
+
+/* Capa interna para acoplar el fondo blanco */
+.menu-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  margin-right: -1px; 
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
 }
 
 a link{
