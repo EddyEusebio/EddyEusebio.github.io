@@ -17,15 +17,47 @@
 })();
 
 /*JS DE SONIDO DEL MENU*/
-  function playSound() {
+  function playSound() { 
     const audio = document.getElementById('Tecla');
     if (audio) {
       audio.currentTime = 0;
       audio.play();
     }
-  }
+  }  
 
 /*JS DE DESPLEGABLE CONTENEDOR*/
+document.addEventListener("DOMContentLoaded", () => {
+  const menu = document.querySelector(".menus");
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const tooltip = document.querySelector(".menu-tooltip");
+  const menuIcon = document.querySelector(".menu-icon");
+
+  toggleBtn.addEventListener("click", () => {
+    // Alterna la clase para abrir o cerrar
+    menu.classList.toggle("closed");
+
+    // Cambia dinámicamente el texto del tooltip y el icono si se desea
+    if (menu.classList.contains("closed")) {
+      tooltip.textContent = "Abrir";
+      menuIcon.textContent = "☰"; // Icono de lista
+    } else {
+      tooltip.textContent = "Cerrar";
+      menuIcon.textContent = "✕"; // Una 'X' al estar abierto
+    }
+  });
+
+  // Opcional: Cierra el menú automáticamente al hacer clic en un enlace de sección
+  const menuLinks = document.querySelectorAll(".menu-links a");
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.add("closed");
+      tooltip.textContent = "Abrir";
+      menuIcon.textContent = "☰";
+    });
+  });
+});
+
+
 
 const acc = document.querySelector('.accordion');
 const panel = document.querySelector('.panel');
