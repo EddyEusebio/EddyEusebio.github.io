@@ -24,6 +24,28 @@ h2 {
 } 
 
 
+.boton-link {
+  text-decoration: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: linear-gradient(to bottom, #ffffff, #78acf1, #ffe4ff);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+  .boton-link:hover {
+  background: linear-gradient(to top, #ffffffb2, #000000);
+  color: rgb(0, 0, 0); 
+  box-shadow: 0 2px 0 #e0ff55, 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  }
  
 h1 {
   color: black; 
