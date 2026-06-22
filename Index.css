@@ -1435,38 +1435,56 @@ header h1, header h3 {
 
 /* Media Queries for Responsiveness */
 
-/* Móviles pequeños (max-width: 768px) */
+/* --- DISPOSITIVOS MÓVILES (max-width: 768px) --- */
 @media (max-width: 768px) {
-  header {
-    min-height: 150px; /* Altura mínima más pequeña */
-    padding: 30px 10px; /* Menos padding */
+  header.main-header {
+    height: auto;
+    min-height: 250px; /* Le damos un poco más de margen para que quepan los textos en vertical */
+    padding: 30px 10px; /* Menos padding para optimizar espacio */
   }
 
-  /* **CAMBIO CLAVE:** Ajustar el ancho de las imágenes del slider en móviles */
-  #headerSlideContainer img {
-    width: calc(100vw / 3); /* Cada imagen sigue ocupando 100% de la ventana móvil, pero en relación al total de slides */
-    /* width: 100vw; // Si quieres que cada slide ocupe toda la pantalla y el transform se ajuste a eso */
-  }
-  /* Si el #headerSlideContainer img se ajusta a 100% del ancho del VIEWPORT (100vw), entonces el JS
-     debe seguir con `translateX(-${headerCurrentSlide * 100}vw)`.
-     Si quieres que se ajuste al 100% del *contenedor padre* (`.slider-background`),
-     entonces `width: 100%;` y el JS sería `translateX(-${headerCurrentSlide * 100}%)`.
-
-     Dado que tu JS usa `vw`, mantendremos `100vw` para la imagen, pero el `width` de `#headerSlideContainer`
-     debe ser `totalSlides * 100vw`.
-  */
+  /* Ajustar el ancho de las imágenes del slider en móviles para mantener tu JS con vw */
   #headerSlideContainer {
     width: calc(100vw * 3); /* Asegura que el contenedor de slides tenga el ancho total */
   }
 
+  #headerSlideContainer img {
+    width: 100vw; /* Cada imagen sigue ocupando el ancho completo de la pantalla móvil */
+    height: 100%;
+    object-fit: cover; /* Evita que las imágenes de fondo se distorsionen en vertical */
+  }
+
+  /* Reducción de la imagen de perfil */
   .profile-img {
-    max-width: 100px; /* Imagen de perfil más pequeña */
+    max-width: 100px; 
+  }
+
+  /* NUEVO: Ajuste de los textos para que no se desborden en móvil */
+  .header-content h1 {
+    font-size: 1.6rem; /* Tamaño más compacto para el nombre */
+    margin: 10px 0;
+  }
+
+  .tags-container {
+    gap: 6px; /* Espaciado más cerrado entre elementos */
+  }
+
+  .tags-container h3 {
+    font-size: 0.85rem; /* Subtítulos más pequeños para que entren en una línea */
   }
 }
 
-/* Smallest mobile devices (max-width: 480px) */
+/* --- DISPOSITIVOS MÁS PEQUEÑOS (max-width: 480px) --- */
 @media (max-width: 480px) {
   .profile-img {
-    max-width: 80px; /* Todavía más pequeña */
+    max-width: 80px; /* Imagen de perfil todavía más pequeña */
+  }
+
+  .header-content h1 {
+    font-size: 1.3rem; /* Ajuste extremo por si el teléfono es muy angosto */
+  }
+
+  .tags-container h3 {
+    font-size: 0.75rem;
   }
 }
