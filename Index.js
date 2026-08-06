@@ -1,4 +1,10 @@
-/*JS DE SLIDERS DE PORTADA*/  
+/*JS DE ANIO EN FOOTER*/
+document.addEventListener("DOMContentLoaded", () => {
+  const anio = document.getElementById("anio-actual");
+  if (anio) anio.textContent = new Date().getFullYear();
+});
+
+/*JS DE SLIDERS DE PORTADA*/
 (function () {
   let headerCurrentSlide = 0;
   const headerSlideContainer = document.getElementById("headerSlideContainer");
@@ -23,7 +29,7 @@
       audio.currentTime = 0;
       audio.play();
     }
-  }  
+  }   
 
 /*JS DE DESPLEGABLE CONTENEDOR*/
 document.addEventListener("DOMContentLoaded", () => {
@@ -173,7 +179,7 @@ emailjs.init("SBuqNR9vKjoZoQUoB"); // Public key
     if (closeBtn && modal) {
       closeBtn.addEventListener("click", function () {
         modal.style.display = "none";
-      });+
+      });
 
       window.addEventListener("click", function (e) {
         if (e.target === modal) {
