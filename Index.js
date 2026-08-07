@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function nextHeaderSlide() {
     headerCurrentSlide = (headerCurrentSlide + 1) % headerTotalSlides;
     updateHeaderSlide();
-  }
+  } 
 
   setInterval(nextHeaderSlide, 3000);
 })();
