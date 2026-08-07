@@ -4,14 +4,16 @@
 :root {
   --font-heading: 'Poppins', 'Segoe UI', sans-serif;
   --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
 
   --color-bg: #060b18;
   --color-navy: #0b1730;
   --color-navy-light: #13214a;
 
   --color-primary: #2f6fed;
-  --color-primary-dark: #1d4fc4; 
+  --color-primary-dark: #1d4fc4;
   --color-accent: #22d3ee;
+  --color-accent-2: #a855f7;
 
   --color-card-bg: linear-gradient(160deg, #ffffff 0%, #eaf3ff 55%, #d9ecff 100%);
   --color-text-dark: #17213e;
@@ -22,12 +24,21 @@
   --radius-md: 14px;
   --radius-sm: 8px;
 
-  --shadow-card: 0 20px 45px -18px rgba(0, 0, 0, 0.55);
-  --shadow-card-hover: 0 22px 45px -14px rgba(47, 111, 237, 0.45);
+  --shadow-card: 0 20px 45px -18px rgba(0, 0, 0, 0.6);
+  --shadow-card-hover: 0 0 35px -4px rgba(34, 211, 238, 0.55), 0 0 70px -15px rgba(168, 85, 247, 0.45);
   --shadow-pop: 0 10px 25px rgba(0, 0, 0, 0.25);
+  --shadow-neon: 0 0 12px rgba(34, 211, 238, 0.55), 0 0 28px rgba(47, 111, 237, 0.35);
 
   --transition: 0.3s ease;
   --max-width: 1000px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 * {
@@ -45,12 +56,14 @@ body,
   color: var(--color-text-light);
   background-color: var(--color-bg);
   background-image:
+    linear-gradient(rgba(34, 211, 238, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.06) 1px, transparent 1px),
     linear-gradient(180deg, rgba(6, 11, 24, 0.9), rgba(6, 11, 24, 0.96)),
     url('Fondo33.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: 42px 42px, 42px 42px, cover, cover;
+  background-repeat: repeat, repeat, no-repeat, no-repeat;
+  background-position: center, center, center, center;
+  background-attachment: fixed, fixed, fixed, fixed;
   overflow-x: hidden;
 }
 
@@ -85,6 +98,7 @@ h2::after {
   height: 4px;
   border-radius: 4px;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.8), 0 0 20px rgba(47, 111, 237, 0.5);
 }
 
 p {
@@ -160,7 +174,7 @@ header.main-header {
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-pop);
+  box-shadow: var(--shadow-pop), 0 0 40px rgba(34, 211, 238, 0.25), 0 0 70px rgba(168, 85, 247, 0.15);
 }
 
 .profile-container {
@@ -179,8 +193,13 @@ header.main-header {
   border-radius: 50%;
   border: 3px solid var(--color-navy);
   background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-  box-shadow: 0 8px 24px rgba(47, 111, 237, 0.45);
+  animation: pulseRing 2.6s ease-in-out infinite;
   object-fit: cover;
+}
+
+@keyframes pulseRing {
+  0%, 100% { box-shadow: 0 0 12px rgba(34, 211, 238, 0.55), 0 0 28px rgba(47, 111, 237, 0.4); }
+  50% { box-shadow: 0 0 22px rgba(34, 211, 238, 0.85), 0 0 46px rgba(168, 85, 247, 0.55); }
 }
 
 header h1 {
@@ -206,25 +225,41 @@ header h1 {
 
 .tags-container h3 {
   display: inline-flex;
+  align-items: center;
+  gap: 4px;
   margin: 0;
-  padding: 7px 18px;
-  font-size: 0.8rem;
+  padding: 7px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
   color: var(--color-text-light);
   text-shadow: none;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(34, 211, 238, 0.35);
   border-radius: 999px;
-  transition: background var(--transition), transform var(--transition);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.tags-container h3::before {
+  content: '<';
+  opacity: 0.6;
+  color: var(--color-accent);
+}
+
+.tags-container h3::after {
+  content: '/>';
+  opacity: 0.6;
+  color: var(--color-accent);
 }
 
 .tags-container h3:hover {
   color: var(--color-text-light);
   text-shadow: none;
   background: var(--color-primary);
-  border-color: var(--color-primary);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-neon);
   transform: translateY(-2px);
 }
 
@@ -238,7 +273,8 @@ header h1 {
   width: 260px;
   height: 100vh;
   background-color: rgba(11, 23, 48, 0.97);
-  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+  border-right: 1px solid rgba(34, 211, 238, 0.25);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4), 0 0 30px rgba(34, 211, 238, 0.12);
   z-index: 9999;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   display: flex;
@@ -307,6 +343,7 @@ header h1 {
 
 .menu-toggle:hover {
   background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-neon);
 }
 
 .list-icon {
@@ -375,6 +412,9 @@ header h1 {
 /* ==========================================================================
    3. TARJETAS DE SECCIÓN (compartidas)
    ========================================================================== */
+/* Contenedor exterior: solo posiciona y aloja el brillo. Nunca lleva
+   transform, así el ::before (z-index:-1) siempre queda oculto detrás,
+   sin importar lo que pase en el hover de la superficie interior. */
 .contenedor1,
 .contenedor2,
 .contenedor3,
@@ -383,27 +423,73 @@ header h1 {
 .contenedor6,
 .contenedor7,
 .form-container {
+  position: relative;
+  max-width: var(--max-width);
+  margin: 50px auto;
+  border-radius: var(--radius-lg);
+}
+
+/* Aro degradado animado detrás de cada tarjeta: el brillo "neón" tecnológico */
+.contenedor1::before,
+.contenedor2::before,
+.contenedor3::before,
+.contenedor4::before,
+.contenedor5::before,
+.contenedor6::before,
+.contenedor7::before,
+.form-container::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(from 0deg, var(--color-accent), var(--color-primary), var(--color-accent-2), var(--color-accent));
+  filter: blur(20px);
+  opacity: 0.6;
+  animation: neonSpin 8s linear infinite;
+}
+
+@keyframes neonSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Superficie interior: aquí viven el fondo, el padding y la sombra.
+   El transform de hover se aplica solo aquí, nunca en el contenedor
+   exterior, así el brillo detrás jamás parpadea ni se superpone. */
+.card-surface {
+  height: 100%;
   background: var(--color-card-bg);
   color: var(--color-text-dark);
   padding: 40px;
   border-radius: var(--radius-lg);
-  max-width: var(--max-width);
-  margin: 50px auto;
-  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(34, 211, 238, 0.5);
+  box-shadow: var(--shadow-card), 0 0 22px rgba(34, 211, 238, 0.35), 0 0 44px rgba(47, 111, 237, 0.2);
   font-family: var(--font-body);
-  transition: box-shadow var(--transition), transform var(--transition);
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+  box-sizing: border-box;
 }
 
-.contenedor1:hover,
-.contenedor2:hover,
-.contenedor3:hover,
-.contenedor4:hover,
-.contenedor5:hover,
-.contenedor6:hover,
-.contenedor7:hover,
-.form-container:hover {
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-4px);
+.contenedor1:hover .card-surface,
+.contenedor2:hover .card-surface,
+.contenedor3:hover .card-surface,
+.contenedor4:hover .card-surface,
+.contenedor5:hover .card-surface,
+.contenedor6:hover .card-surface,
+.contenedor7:hover .card-surface,
+.form-container:hover .card-surface {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-card), 0 0 26px rgba(34, 211, 238, 0.55), 0 0 52px rgba(168, 85, 247, 0.3);
+}
+
+.eyebrow {
+  display: block;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-primary-dark);
+  margin-bottom: 6px;
 }
 
 .contenedor1 p,
@@ -573,7 +659,7 @@ header h1 {
 
 .nav button:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-pop);
+  box-shadow: var(--shadow-neon);
 }
 
 /* ==========================================================================
@@ -603,7 +689,8 @@ header h1 {
 
 .thumbnail:hover {
   transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+  border-color: rgba(34, 211, 238, 0.6);
+  box-shadow: var(--shadow-neon);
 }
 
 .center-group {
@@ -699,7 +786,7 @@ header h1 {
 
 .buttoncv:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-pop);
+  box-shadow: var(--shadow-neon);
 }
 
 /* ==========================================================================
@@ -756,7 +843,8 @@ header h1 {
   align-items: center;
 }
 
-.contact-info-text h2 {
+.contact-info-text h2,
+.contact-info-text .eyebrow {
   grid-column: 1 / -1;
   text-align: center;
   margin-bottom: 15px;
@@ -871,7 +959,7 @@ button {
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-pop);
+  box-shadow: var(--shadow-neon);
 }
 
 /* Modal de confirmación de envío */
@@ -922,7 +1010,7 @@ button:hover {
 
 .boton-link:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-card-hover);
 }
 
 footer.footer {
